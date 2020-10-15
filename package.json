@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/coke12103/BotLoader/issues"
   },
-  "homepage": "https://github.com/coke12103/BotLoader#readme"
+  "homepage": "https://github.com/coke12103/BotLoader#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
 }
