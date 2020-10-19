@@ -3,3 +3,4 @@ data/
 plugins/
 
 !*/.gitkeep
+!plugins/ping.js
