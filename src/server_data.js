@@ -13,7 +13,7 @@ class ServerData{
       var index = JSON.parse(File.load('./data/servers/index.json')).index;
 
       for(var i of index){
-        this.servers[i] = new Server(require(`./data/servers/${i}.json`));
+        this.servers[i] = new Server(File.load(`./data/servers/${i}.json`));
       }
     }catch(e){
       console.log(e);
