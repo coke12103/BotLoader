@@ -8,3 +8,5 @@ class PluginBase{
     return;
   }
 }
+
+module.exports = PluginBase;
