@@ -22,6 +22,17 @@ async function main(){
       if(!message.author.bot && message.guild && !message.content.startsWith(prefix)){
         for(var pl of plugins) pl.onMessage(message);
       }
+
+      if(!message.author.bot && message.guild && message.content.startsWith(prefix)){
+        var lines = message.content.split(' ');
+        var command = lines.shift().replace(prefix, '');
+
+        for(var pl of plugins){
+          for(var com of pl.commands){
+            if(com.command == command) pl.onCommand(command, lines, message);
+          }
+        }
+      }
     }
   )
 }
