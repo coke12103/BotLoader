@@ -17,7 +17,10 @@ class Loader{
           if(fs.statSync(path.join(PL_DIR, index)).isDirectory()) index = path.join(index, "index.js");
 
           var pl = require(path.relative(__dirname, path.join(PL_DIR, index)));
-          plugins.push(new pl());
+          var plugin = new pl();
+          plugins.push(plugin);
+
+          console.log(plugin.name, "loaded!");
         }catch(e){
           console.log(e);
         }
