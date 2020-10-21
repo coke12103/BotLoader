@@ -14,6 +14,7 @@ exports.Servers = Servers;
 
 async function main(){
   var plugins = Loader.load();
+  exports.PluginCount = plugins.length;
 
   Client.login(token);
   Client.on('ready', () => console.log('ready!'));
