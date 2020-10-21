@@ -13,7 +13,7 @@ class ServerData{
       var index = JSON.parse(File.load('./data/servers/index.json')).index;
 
       for(var i of index){
-        this.servers[i] = new Server(File.load(`./data/servers/${i}.json`));
+        this.servers[i] = new Server(JSON.parse(File.load(`./data/servers/${i}.json`)));
       }
     }catch(e){
       console.log(e);
@@ -40,6 +40,7 @@ class ServerData{
       for(var i of Object.keys(this.servers)){
         File.json_write(`./data/servers/${i}.json`, this.servers[i].json());
       }
+      console.log('write!');
     }catch(e){
       console.log(e);
       process.exit(1);
