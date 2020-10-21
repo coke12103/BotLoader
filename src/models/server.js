@@ -1,3 +1,5 @@
+const App = require('../index.js');
+
 class Server{
   constructor(data){
     this.set(data);
@@ -5,12 +7,14 @@ class Server{
 
   set(data){
     if(data.id) this.id = data.id;
-    if(Object.keys(data.storage) && this.storage) Object.assign(this.storage, data.storage);
+    if(data.storage && Object.keys(data.storage) && this.storage) Object.assign(this.storage, data.storage);
+    else if(data.storage && Object.keys(data.storage)) this.storage = data.storage;
     else this.storage = {};
   }
 
   set_storage(key, data){
     this.storage[key] = data;
+    App.Servers.sync();
   }
 
   get_storage(key){
