@@ -3,8 +3,8 @@ const AppInfo = require('../../package.json');
 
 class About extends App.PluginBase{
   constructor(){
-    super('About Plugin');
-    super.addCommand('about');
+    super('About', 'システム情報を表示します');
+    super.addCommand('about', 'あぼーと!');
 
     try{
       this.more_info = require("../../more_info.json").texts;

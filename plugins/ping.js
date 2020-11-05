@@ -2,7 +2,7 @@ const App = require('../src/index');
 
 class Ping extends App.PluginBase{
   constructor(){
-    super('Ping Plugin');
+    super('Ping', 'ping!');
   }
 
   onMessage(mes){
