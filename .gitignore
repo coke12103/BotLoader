@@ -1,6 +1,7 @@
 /node_modules
 /data/*
 /plugins/*
+/more_info.json
 
 !/*/.gitkeep
 !/plugins/ping.js
