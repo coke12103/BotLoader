@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const App = require('./index');
+
 const PL_DIR = './plugins/';
 
 class Loader{
