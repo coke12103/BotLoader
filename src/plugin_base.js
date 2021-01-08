@@ -20,7 +20,7 @@ class PluginBase{
   }
 
   store(){
-    return App.PluginsData.get(this.name).;
+    return App.PluginsData.get(this.name);
   }
 }
 
