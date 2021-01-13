@@ -13,6 +13,8 @@ class Loader{
       var file_list = fs.readdirSync(PL_DIR);
 
       for(var file of file_list) {
+        if(file.startsWith('.git')) continue;
+
         try{
           var index = file;
 
